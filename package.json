@@ -1,0 +1,20 @@
+{
+  "name": "project_cms",
+  "version": "1.0.0",
+  "description": "Project CMS",
+  "main": "index.js",
+  "scripts": {
+    "start":"tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "ts-node-dev": "^1.0.0-pre.56"
+  }
+}
