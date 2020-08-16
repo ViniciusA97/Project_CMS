@@ -5,6 +5,8 @@
     yarn add typescript
     yarn add ts-node-dev -D
     yarn add @types/express -D
+    yarn add uuidv4
+    yarn add dotenv
  
 ### teste:
     yarn start
