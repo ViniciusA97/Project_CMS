@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { Database } from "./database";
 
 const route = Router();
 

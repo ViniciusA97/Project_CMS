@@ -7,7 +7,9 @@
     yarn add @types/express -D
     yarn add uuidv4
     yarn add dotenv
- 
+    yarn add knex
+    yarn add mysql
+
 ### teste:
     yarn start
     Rota de teste: localhost:3333/test
