@@ -8,5 +8,5 @@
 
 > ## Exceções
 1. ✅ Retorna erro **400** se **nome**, **email**, **senha**, **role** não forem fornecidos pelo cliente
-2. Retorna erro **400** se o **email** for inválido
+2. ✅ Retorna erro **400** se o **email** for inválido
 3. Retorna erro **500** se der erro ao tentar criar a conta do usuário
