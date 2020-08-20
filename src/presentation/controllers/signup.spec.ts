@@ -1,14 +1,14 @@
-import { SignUpStoreController } from "./signup-store"
+import { SignUpController } from "./signup"
 import { MissingParamsError } from "../errors/missing-params-error"
 
 describe('SignUp Controller', () => {
   test('Should return 400 if no name is provided', () => {
-    const sut = new SignUpStoreController()
+    const sut = new SignUpController()
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
         password: 'any_password',
-        phone: 'any_phone'
+        role: 'any_role'
       }
     }
 
@@ -18,12 +18,12 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no email is provided', () => {
-    const sut = new SignUpStoreController()
+    const sut = new SignUpController()
     const httpRequest = {
       body: {
         name: 'any_name',
         password: 'any_password',
-        phone: 'any_phone'
+        role: 'any_role'
       }
     }
 
@@ -33,12 +33,12 @@ describe('SignUp Controller', () => {
   })
 
   test('Should return 400 if no password is provided', () => {
-    const sut = new SignUpStoreController()
+    const sut = new SignUpController()
     const httpRequest = {
       body: {
         name: 'any_name',
         email: 'any_email@mail.com',
-        phone: 'any_phone'
+        role: 'any_role'
       }
     }
 
@@ -47,8 +47,8 @@ describe('SignUp Controller', () => {
     expect(httpResponse.body).toEqual(new MissingParamsError('senha'))
   })
 
-  test('Should return 400 if no phone is provided', () => {
-    const sut = new SignUpStoreController()
+  test('Should return 400 if no role is provided', () => {
+    const sut = new SignUpController()
     const httpRequest = {
       body: {
         name: 'any_name',
@@ -59,6 +59,6 @@ describe('SignUp Controller', () => {
 
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamsError('telefone'))
+    expect(httpResponse.body).toEqual(new MissingParamsError('role'))
   })
 })
