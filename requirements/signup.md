@@ -7,6 +7,6 @@
 4. Cria uma conta para o usuário com os dados informados
 
 > ## Exceções
-1. Retorna erro **400** se **nome**, **email**, **senha** não forem fornecidos pelo cliente
+1. ✅ Retorna erro **400** se **nome**, **email**, **senha** não forem fornecidos pelo cliente
 2. Retorna erro **400** se o **email** for inválido
 3. Retorna erro **500** se der erro ao tentar criar a conta do usuário
