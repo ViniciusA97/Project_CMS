@@ -1,8 +1,8 @@
 # Cadastro do Usuário
 
 > ## Caso de Sucesso
-1. Recebe uma requisição do tipo **POST**
-2. Valida dados obrigatórios **nome**, **email**, **senha**
+1. ✅ Recebe uma requisição do tipo **POST**
+2. ✅ Valida dados obrigatórios **nome**, **email**, **senha**
 3. Valida se o **email** é válido
 4. Cria uma conta para o usuário com os dados informados
 
