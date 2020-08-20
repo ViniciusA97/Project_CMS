@@ -1,3 +1,5 @@
+import { HttpRequest, HttpResponse } from "../protocols/http";
+
 export interface Controllers {
-  handle(httpRequest: any): any
+  handle(httpRequest: HttpRequest): HttpResponse
 }

@@ -1,8 +1,9 @@
 import { Controllers } from "./controllers";
 import { MissingParamsError } from "../errors/missing-params-error";
+import { HttpRequest, HttpResponse } from "../protocols/http";
 
 export class SignUpController implements Controllers {
-  handle(httpRequest: any): any {
+  handle(httpRequest: HttpRequest): HttpResponse {
 
     if (!httpRequest.body.name) {
       return {
