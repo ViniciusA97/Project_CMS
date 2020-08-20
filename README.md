@@ -9,6 +9,7 @@
     yarn add dotenv
     yarn add knex
     yarn add mysql
+    yarn add jest -D @types/jest ts-jest
 
 ### teste:
     yarn start
