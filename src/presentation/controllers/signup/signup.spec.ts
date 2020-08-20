@@ -19,7 +19,7 @@ describe('SignUp Controller', () => {
 
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamsError('nome'))
+    expect(httpResponse.body).toEqual(new MissingParamsError('name'))
   })
 
   test('Should return 400 if no email is provided', () => {
@@ -49,7 +49,7 @@ describe('SignUp Controller', () => {
 
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new MissingParamsError('senha'))
+    expect(httpResponse.body).toEqual(new MissingParamsError('password'))
   })
 
   test('Should return 400 if no role is provided', () => {
