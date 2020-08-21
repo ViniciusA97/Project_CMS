@@ -1,16 +1,23 @@
 import {uuid} from 'uuidv4';
+import { Column, Entity, PrimaryGeneratedColumn, BaseEntity, Unique} from 'typeorm';
 
-export class User{
+@Entity()
+@Unique(['email'])
+export class User extends BaseEntity{
 
-    private readonly id: string;
-    private name:string;
-    private email:string;
-    private password:string;
+    @PrimaryGeneratedColumn("uuid")
+    public readonly id: string;
 
-    constructor(props:Omit<User, 'id'>, id?:string){
-        Object.assign(this, props);
-        if(!id){
-            this.id = uuid();
-        }
-    }
+    @Column()
+    public name:string;
+    
+    @Column()
+    public email:string;
+    
+    @Column()
+    public password:string;
+
+    
 }
+
+export default User;
