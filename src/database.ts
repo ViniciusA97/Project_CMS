@@ -1,7 +1,25 @@
-import { createConnection } from 'typeorm';
+import { createConnection, Connection } from 'typeorm';
 
-function connect(){
-    createConnection();
+export class Database{
+
+    private static instance:Database;
+    private connection:Connection;
+
+    private constructor(){
+        this.build();
+    }
+
+    private async build(){
+        this.connection =  await createConnection();
+    }
+
+    public static getInstance():Database{
+        if(!Database.instance) Database.instance = new Database();
+        return Database.instance;
+    }
+
+    public getConnection(){
+        return this.connection;
+    }
+
 }
-
-export { connect as connect}
