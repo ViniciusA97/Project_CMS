@@ -10,6 +10,8 @@
     yarn add mysql
     yarn add jest -D @types/jest ts-jest
     yarn add typeorm
+    yarn add jsonwebtoken
+    yarn add bcrypt
 
 ### teste:
     yarn start
